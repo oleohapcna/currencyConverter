@@ -1,0 +1,154 @@
+/* Variables
+ ------------------------------------------------------------- */
+/* Animation from Animate.css
+ ------------------------------------------------------------- */
+@-webkit-keyframes cardEnter {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes cardEnter {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* Foundation
+ ------------------------------------------------------------- *
+
+/* Container
+ ------------------------------------------------------------- */
+.card {
+  -webkit-animation: cardEnter 0.75s ease-in-out 0.5s;
+  animation: cardEnter 0.75s ease-in-out 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+    width: 355px;
+    height: 398px;
+  padding: 20px;
+  border-radius: 27px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+/*  margin: 20px auto;*/
+  opacity: 0;
+  float: left;
+  margin-left: 190px;
+}
+.card img{
+      width: 40px;
+    height: 40px;
+    /* clear: left; */
+    /* margin: 10px; */
+    position: absolute;
+    left: 168px;
+    top: 151px;
+}
+/* Individual Controls
+ ------------------------------------------------------------- */
+.radio {
+    display: inline-block;
+    padding-right: 125px;
+    font-size: 15px;
+    /* line-height: 49px; */
+    cursor: pointer;
+    font-family: 'montserratregular';
+    color: #415ae8;
+    margin-left: 48px;
+    margin-top: 5px;
+}
+.radio:hover .inner {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: .5;
+}
+.radio input {
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+}
+.radio input:checked + .outer .inner {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.radio input:checked + .outer {
+  border: 3px solid #f08b3b;
+}
+.radio input:focus + .outer .inner {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  background-color: #e67012;
+}
+.radio .outer {
+  height: 14px;
+  width: 14px;
+  display: block;
+  float: left;
+  margin: -3px 9px 10px 10px;
+  border: 3px solid #415ae8;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.radio .inner {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  display: block;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: #ff7f0d;
+  opacity: 0;
+}
